@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+# Virtual envs
+.venv/
+.venv310/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Hydra / logs
+outputs/
+multirun/
+.hydra/
+*.log
+
+# Training artifacts
+checkpoints/
+runs/
+logs/
+tmp/
+temp/
+
+# Data (не коммитим датасеты)
+data/
+datasets/
+downloads/
+cache/
+*.tar
+*.tar.gz
+*.zip
+
+# Audio / generated media (не коммитим большие файлы)
+*.wav
+*.flac
+*.mp3
+*.ogg
+*.m4a
+*.npy
+*.npz
+
+# Torch / model weights
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Experiment tracking
+wandb/
+.cometml/
+comet_ml/
+comet.log
+comet_logs/
+mlruns/
+
+# Secrets / env
+.env
+.env.*
+*.secret
+*.key
+
+# Windows/macOS archive garbage
+__MACOSX/
+._*

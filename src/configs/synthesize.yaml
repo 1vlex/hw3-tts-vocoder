@@ -1,0 +1,21 @@
+audio:
+  sample_rate: 22050
+  win_length: 1024
+  hop_length: 256
+  n_fft: 1024
+  f_min: 0
+  f_max: 11025
+  n_mels: 80
+  power: 2.0
+
+model:
+  generator:
+    upsample_rates: [8, 8, 2, 2]
+    upsample_kernel_sizes: [16, 16, 4, 4]
+    upsample_initial_channel: 512
+
+infer:
+  checkpoint_path: ./checkpoints/best_generator.pt
+  input_dir: ./examples/custom_dir_dataset_example
+  output_dir: ./outputs/resynthesis
+  mode: resynthesis

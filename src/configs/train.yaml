@@ -1,0 +1,51 @@
+seed: 42
+
+audio:
+  sample_rate: 22050
+  win_length: 1024
+  hop_length: 256
+  n_fft: 1024
+  f_min: 0
+  f_max: 11025
+  n_mels: 80
+  power: 2.0
+
+data:
+  train_audio_dir: ./data/ruslan_wavs
+  val_audio_dir: ./data/ruslan_wavs
+
+model:
+  generator:
+    upsample_rates: [8, 8, 2, 2]
+    upsample_kernel_sizes: [16, 16, 4, 4]
+    upsample_initial_channel: 512
+  discriminator:
+    num_scales: 3
+    periods: [2, 3, 5, 7, 11]
+
+train:
+  epochs: 10
+  batch_size: 8
+  num_workers: 2
+  segment_size: 16384
+  lr_g: 0.0002
+  lr_d: 0.0002
+  beta1: 0.8
+  beta2: 0.99
+  use_amp: true
+  grad_clip: 10.0
+  lambda_adv: 1.0
+  lambda_fm: 2.0
+  lambda_mel: 45.0
+  val_num_batches: 8
+
+logging:
+  use_comet: true
+  project: hw3-tts-vocoder
+  run_name: hifigan-baseline-simple
+  log_every_steps: 20
+  log_audio_every_steps: 200
+
+checkpoint:
+  dir: ./checkpoints
+  save_every_steps: 500
