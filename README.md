@@ -36,9 +36,10 @@
 ---
 
 ## Установка
-
+```
 cd E:\hww3
 py -3.10 -m pip install -r requirements.txt
+```
 
 ---
 
@@ -75,12 +76,13 @@ data/mos_eval/
 ## Логирование CometML
 
 Задайте API ключ:
-
+```
 setx COMET_API_KEY "ВАШ_КЛЮЧ"
-
+```
 Проверка:
+```
 echo $env:COMET_API_KEY
-
+```
 ---
 
 ## Обучение
