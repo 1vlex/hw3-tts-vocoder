@@ -104,7 +104,7 @@
 
 - Логирование: **CometML**
 - Ссылка на эксперимент:
-  - https://www.comet.com/1vlex/hw3-tts-vocoder/9530bf5d8ca04618abf110639234bbff?compareXAxis=step&experiment-tab=panels&showOutliers=true&smoothing=0&viewId=new&xAxis=epoch
+  - https://www.comet.com/1vlex/hw3-tts-vocoder/9530bf5d8ca04618abf110639234bbff?compareXAxis=step&experiment-tab=panels&showOutliers=true&smoothing=0&viewId=new&xAxis
 
 ### Наблюдения по логам
 - `train/loss_mel` быстро снижается в начале обучения, затем выходит на плато
