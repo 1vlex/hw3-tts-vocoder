@@ -51,9 +51,9 @@ py -3.10 -m pip install -r requirements.txt
 data/ruslan_wavs/
 
 Если в архиве есть файлы вида ._*.wav, удалите их:
-
+```
 Get-ChildItem .\data\ruslan_wavs -Recurse -Filter '._*.wav' | Remove-Item -Force
-
+```
 ---
 
 ### MOS датасет для оценки
@@ -86,7 +86,7 @@ echo $env:COMET_API_KEY
 ## Обучение
 
 ### Быстрый тест
-
+```
 py -3.10 train.py `
   data.train_audio_dir=.\data\ruslan_wavs `
   data.val_audio_dir=.\data\ruslan_wavs `
@@ -94,11 +94,11 @@ py -3.10 train.py `
   train.batch_size=2 `
   train.num_workers=0 `
   logging.use_comet=false
-
+```
 ---
 
 ### Основное обучение
-
+```
 py -3.10 train.py `
   data.train_audio_dir=.\data\ruslan_wavs `
   data.val_audio_dir=.\data\ruslan_wavs `
@@ -112,7 +112,7 @@ py -3.10 train.py `
   logging.log_every_steps=100 `
   logging.log_audio_every_steps=2000 `
   checkpoint.save_every_steps=2000
-
+```
 Чекпоинты сохраняются в:
 
 checkpoints/
@@ -122,25 +122,26 @@ checkpoints/
 ## Инференс
 
 ### Проверка пайплайна
-
+```
 py -3.10 scripts\make_dummy_custom_dir_dataset.py --out examples\custom_dir_dataset_example
-
+```
+```
 py -3.10 synthesize.py `
  infer.checkpoint_path=.\checkpoints\best_generator.pt `
  infer.input_dir=.\examples\custom_dir_dataset_example `
  infer.output_dir=.\outputs\test `
  infer.mode=resynthesis
-
+```
 ---
 
 ### MOS инференс
-
+```
 py -3.10 synthesize.py `
  infer.checkpoint_path=.\checkpoints\best_generator.pt `
  infer.input_dir=.\data\mos_eval `
  infer.output_dir=.\outputs\mos_eval `
  infer.mode=resynthesis
-
+```
 Результат:
 
 outputs/mos_eval/
@@ -148,9 +149,9 @@ outputs/mos_eval/
 ---
 
 ## Скачивание чекпоинта
-
+```
 py -3.10 scripts\download_checkpoints.py --out checkpoints
-
+```
 ---
 
 ## Важно
