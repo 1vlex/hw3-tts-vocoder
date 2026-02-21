@@ -150,7 +150,7 @@ outputs/mos_eval/
 
 ## Скачивание чекпоинта
 ```
-py -3.10 scripts\download_checkpoints.py --url "[<DIRECT_URL>](https://drive.google.com/uc?export=download&id=197YvUjKbh2pW9jAg6XH4PDw4Lu1gRS3R)" --out checkpoints\best_generator.pt
+py -3.10 scripts\download_checkpoints.py --url "https://drive.google.com/uc?export=download&id=197YvUjKbh2pW9jAg6XH4PDw4Lu1gRS3R" --out checkpoints\best_generator.pt
 ```
 [тык](https://drive.google.com/file/d/197YvUjKbh2pW9jAg6XH4PDw4Lu1gRS3R/view?usp=sharing) - ссылка на best_generator.pt
 ---
