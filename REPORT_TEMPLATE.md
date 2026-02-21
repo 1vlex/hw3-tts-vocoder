@@ -231,13 +231,13 @@ Baseline-модель уже решает задачу восстановлен�
 ## Приложение: иллюстрации анализа
 
 ### Сводный профиль качества (агрегированно, 15 файлов)
-![Сводный профиль качества](figures/quality_radar_aggregate.png)
+![Сводный профиль качества](https://github.com/1vlex/hw3-tts-vocoder/blob/main/report/figures/quality_radar_aggregate.png)
 
 ### Сравнение waveform на MOS-примере
-![Waveform MOS example](figures/mos1_waveforms.png)
+![Waveform MOS example](https://github.com/1vlex/hw3-tts-vocoder/blob/main/report/figures/mos1_waveforms.png)
 
 ### Сравнение waveform на примере из RUSLAN
-![Waveform RUSLAN example](figures/ruslan_example_waveforms.png)
+![Waveform RUSLAN example](https://github.com/1vlex/hw3-tts-vocoder/blob/main/report/figures/ruslan_example_waveforms.png)
 
 ### Сравнение log-mel на MOS-примере
-![Mel MOS example](figures/mos1_mels.png)
+![Mel MOS example](https://github.com/1vlex/hw3-tts-vocoder/blob/main/report/figures/mos1_mels.png)
